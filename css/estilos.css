@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:wght@100..900&display=swap');
+
+* {box-sizing: border-box;}
+
+body{
+    font-family:  'Montserrat', sans-serif;
+    margin: 0;
+}
+
+nav, header, main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section, video {width: 100%;}
+
+nav {
+    background-color: cornflowerblue;
+    height: 15vh;
+    padding: 0 8.33vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div a:hover {opacity: 40%}
+
+nav h1, header h1 {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    font-size: 50px;
+}
+
+nav h1 {
+    animation-name: movimiento;
+    animation-duration: 400ms;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-direction: alternate-reverse;
+}
+
+nav a {font-size: 20px;}    
+
+nav a, header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a, h1, header h3 {
+    line-height: 125%;
+    vertical-align: top;
+}
+
+nav span {display: none;}
+
+.icon-menu {font-size: 6vw;}
+
+.icon-menu:hover {
+    opacity: 40%;
+    cursor: pointer;
+}
+
+header {
+    height: 55vh;
+    text-align: center;
+    color: dimgray;
+    margin: 2%;
+}
+
+header h3 {
+    color: cornflowerblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    letter-spacing:1px;
+}
+
+header p {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+header a {
+    background-color: dimgray;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+header a:hover {
+    transition-property: opacity, border-radius;
+    transition-duration: 1000ms, 2000ms;
+    opacity: 70%;
+    border-radius: 30px;
+}
+
+.mostrar {
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    top:15vh;
+    left:0vw;
+    background-color:dimgray;
+    width: 100vw;
+    padding: 5vw;
+}
+
+main section div {
+    width: 45.83%;
+}
+
+section div img {
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+section div img:hover {
+    transform:scale(1.25);
+    transition-property: transform;
+    transition-duration: 1000ms;
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+video {
+    padding-bottom: 10%;
+}
+
+footer {
+    width: 100vw;
+    height: 15vh;
+    background-color: cornflowerblue;
+}
+
+
+@media (max-width:768px) {
+nav div {
+    display: none;
+    }
+
+nav span {
+    display: inline
+    }
+
+main section div {width: 100%;}
+}
+
+
+@keyframes movimiento {
+    from {
+        opacity: 50%;
+        font-size: 48px;
+    }
+
+    to {
+        opacity: 100%;
+        font-size: 50px;
+    }
+}
